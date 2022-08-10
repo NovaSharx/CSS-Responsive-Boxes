@@ -1,3 +1,40 @@
 body {
   background: papayawhip;
 }
+
+div {
+  border: 1px solid teal;
+} 
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  gap: 0.5em 0.5em;
+}
+
+.a, .c, .d, .e, .f{
+  flex-grow: 1;
+}
+
+.b {
+  flex-grow: 2;
+  min-height: 20vh;
+  width: 100%;
+}
+
+.f {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .a {
+    width: 100%;
+  }
+  .b {
+    width: auto;
+  }
+  .f {
+    min-height: 60vh;
+  }
+}

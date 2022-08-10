@@ -1,28 +1,27 @@
 body {
-  margin: 1em;
   background: blanchedalmond;
+}
+
+div {
+  border: 1px solid teal;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  justify-content: space-between;
+  gap: 0.5em 0.5em;
 }
 
 .a {
-  background-color: red;
   flex-grow: 1;
 }
 
 .b {
-  background-color: blue;
-  margin: 1em 0em;
   flex-grow: 4;
 }
 
 .c {
-  background-color: chartreuse;
   flex-grow: 1;
 }
 
@@ -35,11 +34,6 @@ body {
     width: 100%;
   }
   .b {
-    margin-bottom: 0em;
-    margin-right: 1em;
     min-height:60vh;
-  }
-  .c {
-    margin-top: 1em;
   }
 }
