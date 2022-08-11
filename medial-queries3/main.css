@@ -2,38 +2,49 @@ body {
   background: peachpuff;
 }
 
-div {
+.a, .b, .c, .d, .e, .f, .g, .h {
   border: 1px solid teal;
 }
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 100vh;
-  gap: 1em 1em;
+  gap: 0.5em;
+}
+
+.sub_container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+  flex-grow: 2;
+}
+.sub_container div {
+  display: flex;
+  width: 100%;
+  gap: 0.5em;
 }
 
 .a {
-  width: 100%;
-  min-height: 20vh;
-}
-
-.b, .c, .d, .e, .f, .g {
-  width: 30%;
-  min-height: 20vh;
   flex-grow: 1;
 }
 
 .h {
-  width: 100%;
-  min-height: 40vh;
+  flex-grow: 2;
 }
 
 @media (min-width:600px) {
   .container {
-    flex-flow: column wrap;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
-  .h {
 
+  .a {
+    width: 100%;
+  }
+
+  .sub_container {
+    min-height: 33vh;
+    min-width: 75%;
   }
 }

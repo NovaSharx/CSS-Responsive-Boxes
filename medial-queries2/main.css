@@ -2,30 +2,43 @@ body {
   background: papayawhip;
 }
 
-div {
+.a, .b, .c, .d, .e, .f {
   border: 1px solid teal;
-} 
+}
 
 .container {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   min-height: 100vh;
-  gap: 0.5em 0.5em;
+  gap: 0.5em;
 }
 
-.a, .c, .d, .e, .f{
+.sub_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  flex-grow: 3;
+}
+
+.sub_container div {
+  display: flex;
+  gap: 0.5em;
   flex-grow: 1;
+}
+
+.a {
+  flex-grow: 1;
+  min-height: 20vh;
 }
 
 .b {
   flex-grow: 2;
-  min-height: 20vh;
-  width: 100%;
+  min-height: 35vh;
 }
 
 .f {
-  width: 100%;
+  flex-grow: 1;
+  min-height: 20vh;
 }
 
 @media (min-width: 600px) {
@@ -33,32 +46,13 @@ div {
     flex-direction: row;
     flex-flow: wrap;
   }
+
   .a {
     width: 100%;
-    min-height: 20vh;
   }
-  .b {
-    width: 50vw;
-    flex-grow: 1;
-  }
+
   .f {
-    width: auto;
-    min-width: 20vw;
-    height: 40vh;
-    flex-flow: column;
+    min-height: 60vh;
   }
 
-  .b, .c, .d, .e {
-    flex-flow: row wrap;
-    height: 30vh;
-
-  }
-
- .c, .d, .e {
-  
-  }
-
-  .e {
-
-  }
 }

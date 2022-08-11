@@ -2,7 +2,7 @@ body {
   background: blanchedalmond;
 }
 
-div {
+.a, .b, .c {
   border: 1px solid teal;
 }
 
@@ -10,7 +10,7 @@ div {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  gap: 0.5em 0.5em;
+  gap: 0.5em;
 }
 
 .a {
@@ -34,6 +34,6 @@ div {
     width: 100%;
   }
   .b {
-    min-height:60vh;
+    min-height:40vh;
   }
 }
